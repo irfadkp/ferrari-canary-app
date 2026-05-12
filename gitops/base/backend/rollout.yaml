@@ -15,6 +15,7 @@ spec:
     metadata:
       labels:
         app: ferrari-backend
+        app.kubernetes.io/name: ferrari-app
         app.kubernetes.io/part-of: ferrari-bluegreen
         component: api
     spec:
