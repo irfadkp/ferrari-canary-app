@@ -1,6 +1,8 @@
 package com.ferrari.service;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Service;
 
 import java.net.URI;
@@ -11,8 +13,8 @@ import java.time.Duration;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
-@Slf4j
 public class ExternalApiService {
+    private static final Logger log = LoggerFactory.getLogger(ExternalApiService.class);
 
     private final HttpClient httpClient;
     private static final String[] EXTERNAL_APIS = {

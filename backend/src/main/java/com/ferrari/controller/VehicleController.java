@@ -1,10 +1,12 @@
 package com.ferrari.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.ferrari.service.ErrorGeneratorService;
 import com.ferrari.service.LogGeneratorService;
 import com.ferrari.service.ExternalApiService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +17,9 @@ import java.util.concurrent.ThreadLocalRandom;
 @RestController
 @RequestMapping("/api/vehicles")
 @RequiredArgsConstructor
-@Slf4j
 @CrossOrigin(origins = "*")
 public class VehicleController {
+    private static final Logger log = LoggerFactory.getLogger(VehicleController.class);
 
     private final ErrorGeneratorService errorGenerator;
     private final LogGeneratorService logGenerator;

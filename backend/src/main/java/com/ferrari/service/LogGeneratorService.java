@@ -1,13 +1,15 @@
 package com.ferrari.service;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
-@Slf4j
 public class LogGeneratorService {
+    private static final Logger log = LoggerFactory.getLogger(LogGeneratorService.class);
 
     private static final String[] LOG_CONTEXTS = {
         "Database query execution",
