@@ -91,6 +91,3 @@ spec:
       - pause: {duration: 30s}
       canaryService: ferrari-backend-canary
       stableService: ferrari-backend-stable
-      trafficRouting:
-        traefik:
-          weightedTraefikServiceName: ferrari-backend-weighted
