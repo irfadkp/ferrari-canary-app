@@ -55,6 +55,12 @@ spec:
           value: "instana-agent.instana-agent"
         - name: INSTANA_AGENT_PORT
           value: "42699"
+        - name: INSTANA_SERVICE_NAME
+          value: "ferrari-backend"
+        - name: INSTANA_ZONE
+          value: "ferrari-canary"
+        - name: INSTANA_TAGS
+          value: "app=ferrari,deployment=canary,component=backend"
         resources:
           requests:
             memory: "512Mi"
